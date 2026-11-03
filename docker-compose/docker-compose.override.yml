@@ -1,0 +1,8 @@
+# Personal overrides for this instance. Auto-merged by `docker compose`.
+name: buku
+services:
+  nginx:
+    ports: !override
+      - "8091:80"
+    volumes:
+      - ./nginx.local.conf:/etc/nginx/conf.d/nginx.conf:ro
